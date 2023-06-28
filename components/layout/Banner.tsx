@@ -6,7 +6,7 @@ import { ArrowForwardIcon } from '@chakra-ui/icons'
 export const Banner = () => {
   return (
     <Section>
-      <Stack my={[10,10, 0]} spacing={5} maxW={500} >
+      <Stack my={[10, 10, 0]} spacing={5} maxW={500} >
         <Heading>Your MedTech Software Consultancy</Heading>
         <Text>From design and development to testing and documentation, we build end-to-end solutions for MedTech, corporate innovators, and startups.</Text>
         <Button variant="solid">Book a free consultation <ArrowForwardIcon/></Button>

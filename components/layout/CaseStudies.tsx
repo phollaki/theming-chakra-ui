@@ -6,11 +6,23 @@ import {
   Grid,
   GridItem,
   Heading,
+  SimpleGrid,
   Text,
   VStack,
 } from "@chakra-ui/react";
 import { CenteredSection } from "../sections/CenteredSection";
 import Flex from "@/theme/Flex";
+
+const TechnologyHeading = () => (
+  <CenteredSection>
+    <Heading>Check out our recent case studies</Heading>
+    <Text>
+      Discover the success stories of our clients through our compelling
+      case studies. Explore how our solutions have empowered businesses to
+      achieve their goals and drive tangible results
+    </Text>
+  </CenteredSection>
+)
 
 const caseStudies = [
   {
@@ -43,18 +55,11 @@ export const CaseStudies = () => {
   return (
     <Center maxW="1000px" mx="auto" my="24">
       <VStack spacing={10}>
-        <CenteredSection>
-          <Heading>Check out our recent case studies</Heading>
-          <Text>
-            Discover the success stories of our clients through our compelling
-            case studies. Explore how our solutions have empowered businesses to
-            achieve their goals and drive tangible results
-          </Text>
-        </CenteredSection>
-        <Grid
-          templateColumns={["1fr", "1fr", `repeat(${caseStudies.length}, 1fr)`]}
-          templateRows={[`repeat(${caseStudies.length}, 1fr)`, `repeat(${caseStudies.length}, 1fr)`, '1fr']}
-          w="full"
+        <TechnologyHeading />
+
+         <SimpleGrid
+          columns={[1, 1, caseStudies.length]}
+          row={[caseStudies.length, caseStudies.length, 1]}
           gap={10}
         >
           {caseStudies.map((cs) => (
@@ -62,8 +67,24 @@ export const CaseStudies = () => {
               <Card {...cs} />
             </GridItem>
           ))}
-        </Grid>
+        </SimpleGrid>
       </VStack>
     </Center>
   );
 };
+
+
+// For more complex grids:
+{/*
+<Grid
+  templateColumns={["1fr", "1fr", `repeat(${caseStudies.length}, 1fr)`]}
+  templateRows={[`repeat(${caseStudies.length}, 1fr)`, `repeat(${caseStudies.length}, 1fr)`, '1fr']}
+  gap={10}
+>
+  {caseStudies.map((cs) => (
+    <GridItem key={cs.id}>
+      <Card {...cs} />
+    </GridItem>
+  ))}
+</Grid>
+*/}
