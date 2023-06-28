@@ -4,7 +4,7 @@ import { mode } from '@chakra-ui/theme-tools'
 const Container = defineStyleConfig({
   baseStyle: {
     maxW:"100vw",
-    paddingX:"24",
+    paddingX:['5', '12', "24"],
     paddingY:"16"
   },
   variants: {

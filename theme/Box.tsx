@@ -5,13 +5,15 @@ export const BoxStyles = defineStyleConfig({
   },
   variants: {
     main: {
-      padding: '0 !important',
-      margin: '0 !important',
+      margin: 'auto',
+      maxW:'1700px',
     },
     nav: {
       height:'full',
       borderColor:"gray.100",
-      width:"full" ,
+      width:"full",
+      maxW: '1600px',
+      margin: 'auto',
       px: 5,
       py: 1,
       boxShadow: 'md'

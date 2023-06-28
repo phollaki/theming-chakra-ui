@@ -5,6 +5,7 @@ import { Banner } from '@/components/layout/Banner'
 import Box from '@/theme/Box'
 import { WhoWeAre } from '@/components/layout/WhoWeAre'
 import { Technologies } from '@/components/layout/Technologies'
+import { CaseStudies } from '@/components/layout/CaseStudies'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function Home() {
         <Banner />
         <WhoWeAre />
         <Technologies />
+        <CaseStudies />
       </Box>
     </>
   )
