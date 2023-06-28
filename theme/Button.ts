@@ -33,8 +33,8 @@ const Button = defineStyleConfig({
     })
   },
   defaultProps: {
-    variant: 'solid',
-    colorScheme: 'primary',
+    // variant: 'solid',
+    // colorScheme: 'primary',
   },
 })
 
